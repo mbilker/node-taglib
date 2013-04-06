@@ -5,13 +5,6 @@ var assert = require('assert'),
 
 vows.describe('taglib bindings')
 .addBatch({
-  'opening UTF-8 Path': {
-    topic: Taglib.tagSync(__dirname + '/sample-with-ütf.mp3'),
-    'should be a `Tag`': function(tag) {
-      assert.equal(Taglib.Tag, tag.constructor);
-    }
-  },
-
   'ASF support yes/no should be defined': {
     topic: Taglib.WITH_ASF,
     'is boolean': function(topic) {
